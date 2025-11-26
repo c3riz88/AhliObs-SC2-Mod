@@ -1262,10 +1262,79 @@ void libAHLI_gf_GraphsUpdateDataComparative (int lp_graphIndex) {
     }
 }
 
+void libAHLI_gf_LabelsHookUpUnitsProductionTag (unit lp_producingUnit, string lp_unitTagString) {
+    // Variable Declarations
+    string lv_unitType;
+    int lv_dialogItem;
+    string lv_iconBgStr;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_dialogItem = c_invalidDialogControlId;
+
+    // Implementation
+    lv_unitType = UnitGetType(lp_producingUnit);
+    if ((libAHLI_gf_LabelsUnitUsesCustomStatusBarforProduction(lv_unitType) == false)) {
+        TextExpressionSetToken("Param/Expression/lib_AHLI_22E4833E", "A", UnitTypeGetName(lv_unitType));
+        TriggerDebugOutput(1, TextExpressionAssemble("Param/Expression/lib_AHLI_22E4833E"), true);
+        return ;
+    }
+
+    lv_iconBgStr = (libAHLI_gv_labelsIconBG1 + lp_unitTagString);
+    if ((DataTableValueExists(true, lv_iconBgStr) == false)) {
+        DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon1\\IconBG", lp_producingUnit);
+        lv_dialogItem = DialogControlLastCreated();
+        DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+        libNtve_gf_SaveDataTableValueDialogItem(true, lv_iconBgStr, lv_dialogItem);
+        DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon1\\Icon", lp_producingUnit);
+        lv_dialogItem = DialogControlLastCreated();
+        DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+        libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon1 + lp_unitTagString), lv_dialogItem);
+        DialogControlHookupUnitStatus(c_triggerControlTypeImage, "DisruptIcon1\\IconBG", lp_producingUnit);
+        lv_dialogItem = DialogControlLastCreated();
+        DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+        libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsDisruptIconBG1 + lp_unitTagString), lv_dialogItem);
+        DialogControlHookupUnitStatus(c_triggerControlTypeImage, "DisruptIcon1\\Icon", lp_producingUnit);
+        lv_dialogItem = DialogControlLastCreated();
+        DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+        libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsDisruptIcon1 + lp_unitTagString), lv_dialogItem);
+        if ((libAHLI_gf_LabelsUnitCanProduceUnitsinParallel(lv_unitType) == true)) {
+            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon2\\IconBG", lp_producingUnit);
+            lv_dialogItem = DialogControlLastCreated();
+            DialogControlSetVisible(DialogControlLastCreated(), libAHLI_gv_all_Players, false);
+            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIconBG2 + lp_unitTagString), DialogControlLastCreated());
+            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon2\\Icon", lp_producingUnit);
+            lv_dialogItem = DialogControlLastCreated();
+            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon2 + lp_unitTagString), lv_dialogItem);
+            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon3\\IconBG", lp_producingUnit);
+            lv_dialogItem = DialogControlLastCreated();
+            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIconBG3 + lp_unitTagString), lv_dialogItem);
+            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon3\\Icon", lp_producingUnit);
+            lv_dialogItem = DialogControlLastCreated();
+            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
+            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon3 + lp_unitTagString), lv_dialogItem);
+        }
+
+    }
+
+}
+
+bool libAHLI_gf_LabelsUnitCanProduceUnitsinParallel (string lp_unitType) {
+    // Automatic Variable Declarations
+    // Implementation
+    if (((lp_unitType == "Barracks") || (lp_unitType == "Factory") || (lp_unitType == "Starport"))) {
+        return true;
+    }
+
+    return false;
+}
+
 bool libAHLI_gf_LabelsUnitUsesCustomStatusBarforProduction (string lp_unitType) {
     // Automatic Variable Declarations
     // Implementation
-    if (((lp_unitType == "Larva") || (lp_unitType == "Egg") || (lp_unitType == "Gateway") || (lp_unitType == "Barracks") || (lp_unitType == "Nexus") || (lp_unitType == "Hatchery") || (lp_unitType == "CommandCenter") || (lp_unitType == "TechLab") || (lp_unitType == "BarracksTechLab") || (lp_unitType == "FactoryTechLab") || (lp_unitType == "StarportTechLab") || (lp_unitType == "Factory") || (lp_unitType == "Starport") || (lp_unitType == "Stargate") || (lp_unitType == "RoboticsBay") || (lp_unitType == "Forge") || (lp_unitType == "EngineeringBay") || (lp_unitType == "Armory") || (lp_unitType == "EvolutionChamber") || (lp_unitType == "Spire") || (lp_unitType == "CyberneticsCore") || (lp_unitType == "OrbitalCommand") || (lp_unitType == "PlanetaryFortress") || (lp_unitType == "FleetBeacon") || (lp_unitType == "RoboticsFacility") || (lp_unitType == "TemplarArchive") || (lp_unitType == "TwilightCouncil") || (lp_unitType == "FusionCore") || (lp_unitType == "SpawningPool") || (lp_unitType == "RoachWarren") || (lp_unitType == "BanelingNest") || (lp_unitType == "LurkerDenMP") || (lp_unitType == "GhostAcademy") || (lp_unitType == "GreaterSpire") || (lp_unitType == "Lair") || (lp_unitType == "Hive") || (lp_unitType == "HydraliskDen") || (lp_unitType == "InfestationPit") || (lp_unitType == "UltraliskCavern") || (lp_unitType == "DarkShrine") || (lp_unitType == "WarpGate"))) {
+    if (((lp_unitType == "Larva") || (lp_unitType == "Egg") || (lp_unitType == "Gateway") || (lp_unitType == "Barracks") || (lp_unitType == "Nexus") || (lp_unitType == "Hatchery") || (lp_unitType == "CommandCenter") || (lp_unitType == "TechLab") || (lp_unitType == "BarracksTechLab") || (lp_unitType == "FactoryTechLab") || (lp_unitType == "StarportTechLab") || (lp_unitType == "Factory") || (lp_unitType == "Starport") || (lp_unitType == "Stargate") || (lp_unitType == "RoboticsBay") || (lp_unitType == "Forge") || (lp_unitType == "EngineeringBay") || (lp_unitType == "Armory") || (lp_unitType == "EvolutionChamber") || (lp_unitType == "Spire") || (lp_unitType == "CyberneticsCore") || (lp_unitType == "OrbitalCommand") || (lp_unitType == "PlanetaryFortress") || (lp_unitType == "FleetBeacon") || (lp_unitType == "RoboticsFacility") || (lp_unitType == "TemplarArchive") || (lp_unitType == "TwilightCouncil") || (lp_unitType == "FusionCore") || (lp_unitType == "SpawningPool") || (lp_unitType == "RoachWarren") || (lp_unitType == "BanelingNest") || (lp_unitType == "LurkerDenMP") || (lp_unitType == "GhostAcademy") || (lp_unitType == "GreaterSpire") || (lp_unitType == "Lair") || (lp_unitType == "Hive") || (lp_unitType == "HydraliskDen") || (lp_unitType == "InfestationPit") || (lp_unitType == "UltraliskCavern") || (lp_unitType == "DarkShrine"))) {
         return true;
     }
 
@@ -3687,7 +3756,6 @@ bool libAHLI_gt_LabelsInitialization_Func (bool testConds, bool runActions) {
 
     if (((lv_labelUnitsEnabled == true) || (lv_labelResearchEnabled == true))) {
         libAHLI_gv_labels.lv_active = true;
-        libAHLI_gf_RegisterUnitCreatedEvent(libAHLI_gt_LabelsUnitCreated, null, null, null);
         if ((lv_labelUnitsEnabled == true)) {
             libAHLI_gf_RegisterUnitTrainingProgressEvent(libAHLI_gt_LabelsUnitTrainingStarted, null, c_unitProgressStageStart);
             libAHLI_gf_RegisterUnitArmingProgressEvent(libAHLI_gt_LabelsUnitTrainingStarted, null, c_unitProgressStageStart);
@@ -3718,87 +3786,6 @@ void libAHLI_gt_LabelsInitialization_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Labels - Unit Created
-//--------------------------------------------------------------------------------------------------
-bool libAHLI_gt_LabelsUnitCreated_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    string lv_unitTagString;
-    string lv_unitType;
-    unit lv_unit;
-    int lv_dialogItem;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_unit = EventUnitCreatedUnit();
-    lv_dialogItem = c_invalidDialogControlId;
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    if ((UnitFilterMatch(lv_unit, UnitGetOwner(lv_unit), UnitFilter(0, 0, (1 << c_targetFilterMissile), 0)) == true)) {
-        lv_unitType = UnitGetType(lv_unit);
-        if ((libAHLI_gf_LabelsUnitUsesCustomStatusBarforProduction(lv_unitType) == true)) {
-            lv_unitTagString = IntToString(UnitGetTag(lv_unit));
-            DataTableSetString(true, (lv_unitTagString + libAHLI_gv_labelsSlot1), "");
-            DataTableSetString(true, (lv_unitTagString + libAHLI_gv_labelsSlot2), "");
-            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon1\\IconBG", lv_unit);
-            lv_dialogItem = DialogControlLastCreated();
-            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString), lv_dialogItem);
-            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon1\\Icon", lv_unit);
-            lv_dialogItem = DialogControlLastCreated();
-            libNtve_gf_SetDialogItemImage(lv_dialogItem, "Assets\\Textures\\blank.dds", libAHLI_gv_obs);
-            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString), lv_dialogItem);
-            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "DisruptIcon1\\IconBG", lv_unit);
-            lv_dialogItem = DialogControlLastCreated();
-            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsDisruptIconBG1 + lv_unitTagString), lv_dialogItem);
-            DialogControlHookupUnitStatus(c_triggerControlTypeImage, "DisruptIcon1\\Icon", lv_unit);
-            lv_dialogItem = DialogControlLastCreated();
-            libNtve_gf_SetDialogItemImage(lv_dialogItem, "Assets\\Textures\\blank.dds", libAHLI_gv_obs);
-            DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-            libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsDisruptIcon1 + lv_unitTagString), lv_dialogItem);
-            if (((lv_unitType == "Barracks") || (lv_unitType == "Factory") || (lv_unitType == "Starport"))) {
-                DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon2\\IconBG", lv_unit);
-                lv_dialogItem = DialogControlLastCreated();
-                DialogControlSetVisible(DialogControlLastCreated(), libAHLI_gv_all_Players, false);
-                libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIconBG2 + lv_unitTagString), DialogControlLastCreated());
-                DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon2\\Icon", lv_unit);
-                lv_dialogItem = DialogControlLastCreated();
-                libNtve_gf_SetDialogItemImage(lv_dialogItem, "Assets\\Textures\\blank.dds", libAHLI_gv_obs);
-                DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-                libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon2 + lv_unitTagString), lv_dialogItem);
-                DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon3\\IconBG", lv_unit);
-                lv_dialogItem = DialogControlLastCreated();
-                DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-                libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIconBG3 + lv_unitTagString), lv_dialogItem);
-                DialogControlHookupUnitStatus(c_triggerControlTypeImage, "StatusIcon3\\Icon", lv_unit);
-                lv_dialogItem = DialogControlLastCreated();
-                libNtve_gf_SetDialogItemImage(lv_dialogItem, "Assets\\Textures\\blank.dds", libAHLI_gv_obs);
-                DialogControlSetVisible(lv_dialogItem, libAHLI_gv_all_Players, false);
-                libNtve_gf_SaveDataTableValueDialogItem(true, (libAHLI_gv_labelsIcon3 + lv_unitTagString), lv_dialogItem);
-            }
-
-        }
-        else {
-            return false;
-        }
-    }
-    else {
-        return false;
-    }
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void libAHLI_gt_LabelsUnitCreated_Init () {
-    libAHLI_gt_LabelsUnitCreated = TriggerCreate("libAHLI_gt_LabelsUnitCreated_Func");
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: Labels - Unit Training Started
 //--------------------------------------------------------------------------------------------------
 bool libAHLI_gt_LabelsUnitTrainingStarted_Func (bool testConds, bool runActions) {
@@ -3806,7 +3793,7 @@ bool libAHLI_gt_LabelsUnitTrainingStarted_Func (bool testConds, bool runActions)
     string lv_unitTagString;
     string lv_unitTagStringSlot1;
     string lv_unitTagStringSlot2;
-    int lv_activeTags;
+    bool lv_reactorTags;
     int lv_dialogItem;
     string lv_savedTypeSlot1;
     string lv_savedTypeSlot2;
@@ -3828,6 +3815,7 @@ bool libAHLI_gt_LabelsUnitTrainingStarted_Func (bool testConds, bool runActions)
 
     if (((UnitTypeTestAttribute(lv_unitType, c_unitAttributeStructure) == true) || (lv_unitType == "Egg"))) {
         lv_unitTagString = IntToString(UnitGetTag(lv_unit));
+        libAHLI_gf_LabelsHookUpUnitsProductionTag(lv_unit, lv_unitTagString);
         lv_unitTagStringSlot1 = (lv_unitTagString + libAHLI_gv_labelsSlot1);
         lv_unitTagStringSlot2 = (lv_unitTagString + libAHLI_gv_labelsSlot2);
         lv_savedTypeSlot1 = DataTableGetString(true, lv_unitTagStringSlot1);
@@ -3835,12 +3823,10 @@ bool libAHLI_gt_LabelsUnitTrainingStarted_Func (bool testConds, bool runActions)
             DataTableSetString(true, lv_unitTagStringSlot1, (lv_traineeType));
             lv_savedTypeSlot1 = (lv_traineeType);
             lv_savedTypeSlot2 = DataTableGetString(true, lv_unitTagStringSlot2);
-            if ((lv_savedTypeSlot2 == "")) {
-                lv_activeTags = 1;
+            if ((lv_savedTypeSlot2 != "")) {
+                lv_reactorTags = true;
             }
-            else {
-                lv_activeTags = 2;
-            }
+
         }
         else {
             if ((lv_traineeType == "Zergling") && (lv_savedTypeSlot1 == (lv_traineeType))) {
@@ -3849,9 +3835,9 @@ bool libAHLI_gt_LabelsUnitTrainingStarted_Func (bool testConds, bool runActions)
 
             DataTableSetString(true, lv_unitTagStringSlot2, (lv_traineeType));
             lv_savedTypeSlot2 = (lv_traineeType);
-            lv_activeTags = 2;
+            lv_reactorTags = true;
         }
-        if ((lv_activeTags == 2)) {
+        if ((lv_reactorTags == true)) {
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString)), libAHLI_gv_obs, false);
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString)), libAHLI_gv_obs, false);
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG2 + lv_unitTagString)), libAHLI_gv_obs, true);
@@ -3888,19 +3874,22 @@ bool libAHLI_gt_LabelsResearchStarted_Func (bool testConds, bool runActions) {
     // Variable Declarations
     int lv_dialogItem;
     string lv_research;
+    unit lv_unit;
     string lv_unitTagString;
 
     // Automatic Variable Declarations
     // Variable Initialization
     lv_dialogItem = c_invalidDialogControlId;
     lv_research = libNtve_gf_TriggeringProgressUpgrade();
-    lv_unitTagString = IntToString(UnitGetTag(EventUnit()));
+    lv_unit = EventUnit();
+    lv_unitTagString = IntToString(UnitGetTag(lv_unit));
 
     // Actions
     if (!runActions) {
         return true;
     }
 
+    libAHLI_gf_LabelsHookUpUnitsProductionTag(lv_unit, lv_unitTagString);
     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString)), libAHLI_gv_obs, true);
     lv_dialogItem = libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString));
     libNtve_gf_SetDialogItemImage(lv_dialogItem, (CatalogFieldValueGet(c_gameCatalogUpgrade, lv_research, "Icon", c_playerAny)), libAHLI_gv_obs);
@@ -3945,7 +3934,7 @@ bool libAHLI_gt_LabelsUnitTrainingStopped_Func (bool testConds, bool runActions)
         if ((lv_savedTypeSlot1 == (lv_traineeType)) && (lv_savedTypeSlot2 == "")) {
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString)), libAHLI_gv_obs, false);
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString)), libAHLI_gv_obs, false);
-            DataTableSetString(true, lv_unitTagStringSlot1, "");
+            DataTableValueRemove(true, lv_unitTagStringSlot1);
         }
         else if ((lv_savedTypeSlot2 == (lv_traineeType)) && (lv_savedTypeSlot1 == "")) {
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString)), libAHLI_gv_obs, false);
@@ -3954,7 +3943,7 @@ bool libAHLI_gt_LabelsUnitTrainingStopped_Func (bool testConds, bool runActions)
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon2 + lv_unitTagString)), libAHLI_gv_obs, false);
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG3 + lv_unitTagString)), libAHLI_gv_obs, false);
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon3 + lv_unitTagString)), libAHLI_gv_obs, false);
-            DataTableSetString(true, lv_unitTagStringSlot2, "");
+            DataTableValueRemove(true, lv_unitTagStringSlot2);
         }
         else if ((lv_savedTypeSlot1 == (lv_traineeType)) && (lv_savedTypeSlot2 != "")) {
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG2 + lv_unitTagString)), libAHLI_gv_obs, false);
@@ -3966,7 +3955,7 @@ bool libAHLI_gt_LabelsUnitTrainingStopped_Func (bool testConds, bool runActions)
             libNtve_gf_SetDialogItemImage(lv_dialogItem, (CatalogFieldValueGet(c_gameCatalogActor, (lv_savedTypeSlot2), "UnitIcon", c_playerAny)), libAHLI_gv_obs);
             DialogControlSetVisible(lv_dialogItem, libAHLI_gv_obs, true);
             DataTableSetString(true, lv_unitTagStringSlot1, lv_savedTypeSlot2);
-            DataTableSetString(true, lv_unitTagStringSlot2, "");
+            DataTableValueRemove(true, lv_unitTagStringSlot2);
         }
         else if ((lv_savedTypeSlot2 == (lv_traineeType)) && (lv_savedTypeSlot1 != "")) {
             DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG2 + lv_unitTagString)), libAHLI_gv_obs, false);
@@ -3977,7 +3966,7 @@ bool libAHLI_gt_LabelsUnitTrainingStopped_Func (bool testConds, bool runActions)
             lv_dialogItem = libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString));
             libNtve_gf_SetDialogItemImage(lv_dialogItem, (CatalogFieldValueGet(c_gameCatalogActor, (lv_savedTypeSlot1), "UnitIcon", c_playerAny)), libAHLI_gv_obs);
             DialogControlSetVisible(lv_dialogItem, libAHLI_gv_obs, true);
-            DataTableSetString(true, lv_unitTagStringSlot2, "");
+            DataTableValueRemove(true, lv_unitTagStringSlot2);
         }
     }
     else {
@@ -4023,7 +4012,6 @@ void libAHLI_gt_LabelsResearchStopped_Init () {
 bool libAHLI_gt_LabelsReactorDestroyed_Func (bool testConds, bool runActions) {
     // Variable Declarations
     string lv_unitTagString;
-    string lv_slot1unitType;
     int lv_dialogItem;
     unit lv_unit;
     string lv_unitType;
@@ -4043,26 +4031,26 @@ bool libAHLI_gt_LabelsReactorDestroyed_Func (bool testConds, bool runActions) {
     }
 
     if (((lv_unitType == "BarracksReactor") || (lv_unitType == "FactoryReactor") || (lv_unitType == "StarportReactor"))) {
-        auto00CB1734_g = UnitGroup(null, UnitGetOwner(lv_unit), RegionCircle(PointWithOffset(UnitGetPosition(lv_unit), -2.5, 0.5), 0.1), UnitFilter((1 << c_targetFilterGround) | (1 << c_targetFilterStructure), 0, 0, (1 << (c_targetFilterDead - 32))), 0);
+        auto00CB1734_g = UnitGroup(null, UnitGetOwner(lv_unit), RegionCircle(PointWithOffset(UnitGetPosition(lv_unit), -2.5, 0.5), 0.0), UnitFilter((1 << c_targetFilterGround) | (1 << c_targetFilterStructure), 0, 0, (1 << (c_targetFilterDead - 32))), 0);
         auto00CB1734_u = UnitGroupCount(auto00CB1734_g, c_unitCountAll);
         for (;; auto00CB1734_u -= 1) {
             lv_unit = UnitGroupUnitFromEnd(auto00CB1734_g, auto00CB1734_u);
             if (lv_unit == null) { break; }
-            lv_unitType = UnitGetType(lv_unit);
-            if (((lv_unitType == "Barracks") || (lv_unitType == "Factory") || (lv_unitType == "Starport")) && (libNtve_gf_QueuedUnitTypeInTrainingQueueSlot(lv_unit, 1, 1) != "")) {
-                lv_unitTagString = IntToString(UnitGetTag(lv_unit));
-                lv_slot1unitType = DataTableGetString(true, (lv_unitTagString + libAHLI_gv_labelsSlot1));
-                if ((lv_slot1unitType != "")) {
+            if ((libAHLI_gf_LabelsUnitCanProduceUnitsinParallel(UnitGetType(lv_unit)) == true)) {
+                lv_unitType = libNtve_gf_QueuedUnitTypeInTrainingQueueSlot(lv_unit, 1, 1);
+                if ((lv_unitType != null)) {
+                    lv_unitTagString = IntToString(UnitGetTag(lv_unit));
                     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG2 + lv_unitTagString)), libAHLI_gv_obs, false);
                     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon2 + lv_unitTagString)), libAHLI_gv_obs, false);
                     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG3 + lv_unitTagString)), libAHLI_gv_obs, false);
                     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon3 + lv_unitTagString)), libAHLI_gv_obs, false);
                     DialogControlSetVisible(libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIconBG1 + lv_unitTagString)), libAHLI_gv_obs, true);
                     lv_dialogItem = libNtve_gf_ValueFromDataTableDialogItem(true, (libAHLI_gv_labelsIcon1 + lv_unitTagString));
-                    libNtve_gf_SetDialogItemImage(lv_dialogItem, (CatalogFieldValueGet(c_gameCatalogActor, (lv_slot1unitType), "UnitIcon", c_playerAny)), libAHLI_gv_obs);
+                    libNtve_gf_SetDialogItemImage(lv_dialogItem, (CatalogFieldValueGet(c_gameCatalogActor, lv_unitType, "UnitIcon", c_playerAny)), libAHLI_gv_obs);
                     DialogControlSetVisible(lv_dialogItem, libAHLI_gv_obs, true);
                 }
 
+                return true;
             }
 
         }
@@ -4895,16 +4883,13 @@ bool libAHLI_gt_MinimapFrustumPlayerLeaves_Func (bool testConds, bool runActions
 
     if ((libAHLI_gv_minimapFrustum.lv_playerOne == lv_player)) {
         if ((libAHLI_gv_minimapFrustum.lv_ping[0] != c_invalidPingId)) {
-            PingDestroy(libAHLI_gv_minimapFrustum.lv_ping[0]);
+            PingSetVisible(libAHLI_gv_minimapFrustum.lv_ping[0], false);
         }
 
     }
-    else {
-        if ((libAHLI_gv_minimapFrustum.lv_playerTwo == lv_player)) {
-            if ((libAHLI_gv_minimapFrustum.lv_ping[1] != c_invalidPingId)) {
-                PingDestroy(libAHLI_gv_minimapFrustum.lv_ping[1]);
-            }
-
+    else if ((libAHLI_gv_minimapFrustum.lv_playerTwo == lv_player)) {
+        if ((libAHLI_gv_minimapFrustum.lv_ping[1] != c_invalidPingId)) {
+            PingSetVisible(libAHLI_gv_minimapFrustum.lv_ping[1], false);
         }
 
     }
@@ -5345,7 +5330,6 @@ void libAHLI_InitTriggers () {
     libAHLI_gt_GraphsInitialization_Init();
     libAHLI_gt_GraphsTimer_Init();
     libAHLI_gt_LabelsInitialization_Init();
-    libAHLI_gt_LabelsUnitCreated_Init();
     libAHLI_gt_LabelsUnitTrainingStarted_Init();
     libAHLI_gt_LabelsResearchStarted_Init();
     libAHLI_gt_LabelsUnitTrainingStopped_Init();

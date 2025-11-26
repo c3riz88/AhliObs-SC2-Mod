@@ -250,6 +250,8 @@ int libAHLI_gf_GetFixedUnitResourceCost (unit lp_unit, int lp_resource, int lp_p
 void libAHLI_gf_GraphsDefineGraph (int lp_id, text lp_title, string lp_frameName, string lp_scoreType, int lp_style, fixed lp_minimumValue, fixed lp_rangeBase, fixed lp_rangeIncrement, bool lp_averageValues);
 void libAHLI_gf_GraphsUpdateDataDifferential (int lp_graphIndex);
 void libAHLI_gf_GraphsUpdateDataComparative (int lp_graphIndex);
+void libAHLI_gf_LabelsHookUpUnitsProductionTag (unit lp_producingUnit, string lp_unitTagString);
+bool libAHLI_gf_LabelsUnitCanProduceUnitsinParallel (string lp_unitType);
 bool libAHLI_gf_LabelsUnitUsesCustomStatusBarforProduction (string lp_unitType);
 bool libAHLI_gf_LabelsUnitCanEffectivelyBeContaminated (string lp_unitType);
 void libAHLI_gf_LabelsPylonPowerSetPoweredDown (unit lp_unit);
@@ -314,7 +316,6 @@ trigger libAHLI_gt_OverseerFromOverlordTransportDied;
 trigger libAHLI_gt_GraphsInitialization;
 trigger libAHLI_gt_GraphsTimer;
 trigger libAHLI_gt_LabelsInitialization;
-trigger libAHLI_gt_LabelsUnitCreated;
 trigger libAHLI_gt_LabelsUnitTrainingStarted;
 trigger libAHLI_gt_LabelsResearchStarted;
 trigger libAHLI_gt_LabelsUnitTrainingStopped;
