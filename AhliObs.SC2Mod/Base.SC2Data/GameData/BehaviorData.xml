@@ -40,4 +40,47 @@
     <CBehaviorPowerUser id="PowerUserQueueSmall">
         <PowerStageArray index="1" LevelGainEffect="AHLI_PowerLevelGained" LevelLossEffect="AHLI_PowerLevelLost"/>
     </CBehaviorPowerUser>
+    <!--Economy rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorResource id="MineralFieldMinerals450">
+        <DepletionThreshold value="903"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque">
+        <DepletionThreshold value="903"/>
+        <Capacity value="1800"/>
+        <Contents value="1800"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque900">
+        <DepletionThreshold value="903"/>
+        <Capacity value="900"/>
+        <Contents value="900"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <HarvestAmount value="8"/>
+        <Capacity value="2250"/>
+        <Contents value="2250"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals">
+        <Capacity value="1800"/>
+        <Contents value="1800"/>
+        <DepletionThreshold value="903"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals750">
+        <DepletionThreshold value="903"/>
+        <Capacity value="900"/>
+        <Contents value="900"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <Capacity value="1800"/>
+        <Contents value="1800"/>
+        <DepletionThreshold value="903"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals750">
+        <DepletionThreshold value="903"/>
+        <Capacity value="900"/>
+        <Contents value="900"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="2250"/>
+        <Contents value="2250"/>
+    </CBehaviorResource>
 </Catalog>
