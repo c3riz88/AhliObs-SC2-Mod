@@ -113,11 +113,19 @@
         </DamageResponse>
     </CBehaviorBuff>
     <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorPowerUser id="PowerUserWarpable">
+        <PowerStageArray MinPowerLevel="2" LevelGainEffect="PowerUserWarpablelevel2gained" LevelLossEffect="PowerUserWarpablelevel2lost">
+            <Modification>
+                <RateMultiplierArray index="Progress" value="3.2"/>
+            </Modification>
+        </PowerStageArray>
+    </CBehaviorPowerUser>
     <CBehaviorBuff id="MorphingintoWarpGate">
-        <DisableValidatorArray value="GatewayMorphing"/>
-        <DisableValidatorArray value="GatewayMorphingCombine" removed="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray index="0" value="GatewayMorphing"/>
         <Modification>
-            <AbilLinkDisableArray value="Rally" removed="1"/>
+            <AbilLinkDisableArray index="0" removed="1"/>
         </Modification>
     </CBehaviorBuff>
     <!--Protoss Sentry rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
