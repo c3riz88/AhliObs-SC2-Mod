@@ -27,4 +27,17 @@
     <CUnit id="StarportTechLab">
         <LeaderAlias value="TechLab"/>
     </CUnit>
+    <!--Zerg Hatchery, Lair and Hive rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Hatchery">
+        <Food value="6"/>
+        <CostResource index="Minerals" value="325"/>
+    </CUnit>
+    <CUnit id="Lair">
+        <Food value="6"/>
+        <CostResource index="Minerals" value="475"/>
+    </CUnit>
+    <CUnit id="Hive">
+        <Food value="6"/>
+        <CostResource index="Minerals" value="675"/>
+    </CUnit>
 </Catalog>
