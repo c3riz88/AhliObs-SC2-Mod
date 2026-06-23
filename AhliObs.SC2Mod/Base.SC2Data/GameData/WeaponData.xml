@@ -4,4 +4,9 @@
     <CWeaponLegacy id="GlaiveWurm">
         <ArcSlop value="45"/>
     </CWeaponLegacy>
+    <!--Terran Ghost rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CWeaponLegacy id="C10CanisterRifle">
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+    </CWeaponLegacy>
 </Catalog>

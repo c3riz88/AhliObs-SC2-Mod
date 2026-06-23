@@ -25,4 +25,10 @@
         <CmdButtonArray index="LoadAll" removed="1"/>
         <SearchRadius removed="1"/>
     </CAbilTransport>
+    <!--Terran Ghost rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilEffectTarget id="ChannelSnipe">
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+    </CAbilEffectTarget>
 </Catalog>

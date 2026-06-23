@@ -43,4 +43,18 @@
             <SortArray index="2" removed="1"/>
         </TargetSorts>
     </CEffectEnumArea>
+    <!--Terran Ghost rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectDamage id="C10CanisterRifle">
+        <AttributeBonus index="Light" value="10"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectDamage id="ChannelSnipeDamage">
+        <Amount value="130"/>
+        <AttributeBonus index="Psionic" value="40"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="ChannelSnipeEnergyRefund">
+        <VitalArray index="Energy">
+            <Change value="50"/>
+        </VitalArray>
+    </CEffectModifyUnit>
 </Catalog>
