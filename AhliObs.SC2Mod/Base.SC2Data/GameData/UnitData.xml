@@ -63,7 +63,7 @@
     </CUnit>
     <CUnit id="OverlordTransport">
         <CardLayouts index="0">
-            <LayoutButtons Face="LoadNearbyOverlord" Type="AbilCmd" AbilCmd="OverlordTransport,LoadAll" Row="1" Column="2" removed="1"/>
+            <LayoutButtons index="12" Face="" Type="Undefined" AbilCmd="" Row="0" Column="0"/>
         </CardLayouts>
     </CUnit>
     <!--Terran Command Center rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
@@ -92,7 +92,7 @@
     <!--Terran Medivac rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CUnit id="Medivac">
         <CardLayouts index="0">
-            <LayoutButtons Face="LoadNearbyMedivac" Type="AbilCmd" AbilCmd="MedivacTransport,LoadAll" Row="1" Column="2" removed="1"/>
+            <LayoutButtons index="11" Face="" Type="Undefined" AbilCmd="" Row="0" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="Marine">
@@ -154,12 +154,12 @@
     <!--Protoss Warp Prism rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CUnit id="WarpPrism">
         <CardLayouts index="0">
-            <LayoutButtons Face="LoadNearbyWarpPrism" Type="AbilCmd" AbilCmd="WarpPrismTransport,LoadAll" Row="1" Column="2" removed="1"/>
+            <LayoutButtons index="9" Face="" Type="Undefined" AbilCmd="" Row="0" Column="0"/>
         </CardLayouts>
     </CUnit>
     <CUnit id="WarpPrismPhasing">
         <CardLayouts index="0">
-            <LayoutButtons Face="LoadNearbyWarpPrism" Type="AbilCmd" AbilCmd="WarpPrismTransport,LoadAll" Row="1" Column="2" removed="1"/>
+            <LayoutButtons index="10" Face="" Type="Undefined" AbilCmd="" Row="0" Column="0"/>
         </CardLayouts>
     </CUnit>
 </Catalog>
