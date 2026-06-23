@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!--Zerg Mutalisk rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CWeaponLegacy id="GlaiveWurm">
+        <ArcSlop value="45"/>
+    </CWeaponLegacy>
+</Catalog>

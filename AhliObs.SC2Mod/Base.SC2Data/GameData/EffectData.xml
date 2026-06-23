@@ -28,4 +28,19 @@
     <CEffectModifyUnit id="CopyOrdersCaster">
         <CopyOrderCount value="0"/>
     </CEffectModifyUnit>
+    <!--Zerg Mutalisk rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectEnumArea id="GlaiveWurmE1">
+        <TargetSorts>
+            <SortArray index="0" removed="1"/>
+            <SortArray index="1" removed="1"/>
+            <SortArray index="2" removed="1"/>
+        </TargetSorts>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="GlaiveWurmE2">
+        <TargetSorts>
+            <SortArray index="0" removed="1"/>
+            <SortArray index="1" removed="1"/>
+            <SortArray index="2" removed="1"/>
+        </TargetSorts>
+    </CEffectEnumArea>
 </Catalog>
