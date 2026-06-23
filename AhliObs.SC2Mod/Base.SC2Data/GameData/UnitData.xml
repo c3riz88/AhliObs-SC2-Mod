@@ -134,4 +134,9 @@
     <CUnit id="WarpPrismPhasing">
         <BehaviorArray index="0" Link="WarpPrismPowerSourceFast"/>
     </CUnit>
+    <!--Protoss Shield Battery rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="ShieldBattery">
+        <EnergyStart value="50"/>
+        <BehaviorArray Link="BatteryEnergy"/>
+    </CUnit>
 </Catalog>
