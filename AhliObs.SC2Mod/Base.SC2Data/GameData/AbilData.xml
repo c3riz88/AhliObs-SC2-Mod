@@ -36,4 +36,65 @@
         <CmdButtonArray index="LoadAll" removed="1"/>
         <SearchRadius removed="1"/>
     </CAbilTransport>
+    <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilMorph id="MorphBackToGateway">
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="10"/>
+                <EffectArray index="Finish" value="UpgradeToWarpGateAutoCastDisabler"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="10"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="10"/>
+            </SectionArray>
+        </InfoArray>
+        <CmdButtonArray index="Execute">
+            <Flags index="ToSelection" value="0"/>
+        </CmdButtonArray>
+        <Flags index="Interruptible" value="0"/>
+        <BehaviorOn value=""/>
+        <BehaviorOff value=""/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphBuildingGatewayWarpGateFree" removed="1"/>
+    <CAbilMorph id="UpgradeToWarpGate">
+        <CmdButtonArray index="Execute" Requirements="UseWarpGate">
+            <Flags index="ToSelection" value="0"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="Interruptible" value="0"/>
+        <Cost>
+            <Resource index="Minerals" value="0"/>
+            <Resource index="Vespene" value="0"/>
+        </Cost>
+        <InfoArray index="0">
+            <SectionArray index="Abils">
+                <EffectArray index="Finish" value="HasMorphedBefore" removed="1"/>
+            </SectionArray>
+        </InfoArray>
+        <BehaviorOn value=""/>
+        <BehaviorOff value=""/>
+    </CAbilMorph>
+    <CAbilWarpTrain id="WarpGateTrain">
+        <InfoArray index="Train1" Time="16">
+            <Charge TimeStart="30" TimeUse="28"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="16">
+            <Charge TimeUse="32"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="16">
+            <Charge TimeUse="45"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="16">
+            <Charge TimeUse="45"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="16">
+            <Charge TimeUse="32"/>
+        </InfoArray>
+        <InfoArray index="Train7" Time="16">
+            <Charge TimeUse="28"/>
+        </InfoArray>
+    </CAbilWarpTrain>
 </Catalog>

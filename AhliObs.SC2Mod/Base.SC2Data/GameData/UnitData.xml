@@ -104,4 +104,34 @@
     <CUnit id="Nexus">
         <Food value="15"/>
     </CUnit>
+    <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Nexus">
+        <BehaviorArray Link="FastEnablerPowerSourceNexus"/>
+    </CUnit>
+    <CUnit id="Gateway">
+        <AbilArray Link="MorphBuildingGatewayWarpGateFree" removed="1"/>
+        <BehaviorArray Link="MorphingintoWarpGate"/>
+        <BehaviorArray Link="GatewayTrainingState" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Zealot" Type="AbilCmd" AbilCmd="WarpGateTrain,Train1" Row="0" Column="0" removed="1"/>
+            <LayoutButtons Face="Stalker" Type="AbilCmd" AbilCmd="WarpGateTrain,Train2" Row="0" Column="2" removed="1"/>
+            <LayoutButtons Face="HighTemplar" Type="AbilCmd" AbilCmd="WarpGateTrain,Train4" Row="1" Column="0" removed="1"/>
+            <LayoutButtons Face="Sentry" Type="AbilCmd" AbilCmd="WarpGateTrain,Train6" Row="0" Column="1" removed="1"/>
+            <LayoutButtons Face="WarpInAdept" Type="AbilCmd" AbilCmd="WarpGateTrain,Train7" Row="0" Column="3" removed="1"/>
+            <LayoutButtons Face="UpgradeToWarpGate" Type="AbilCmd" AbilCmd="MorphBuildingGatewayWarpGateFree,Execute" Row="2" Column="0" removed="1"/>
+        </CardLayouts>
+        <SubgroupPriority value="24"/>
+    </CUnit>
+    <CUnit id="WarpGate">
+        <SubgroupPriority value="30"/>
+        <EffectArray index="Create" value="HasMorphedBefore" removed="1"/>
+        <EffectArray index="Birth" value="HasMorphedBefore" removed="1"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="MorphBackToGateway,Cancel" Row="2" Column="4" removed="1"/>
+            <LayoutButtons Face="UpgradeToWarpGate" Type="AbilCmd" Row="2" Column="0" removed="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="WarpPrismPhasing">
+        <BehaviorArray index="0" Link="WarpPrismPowerSourceFast"/>
+    </CUnit>
 </Catalog>

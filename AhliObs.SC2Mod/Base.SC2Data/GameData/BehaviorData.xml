@@ -112,4 +112,12 @@
             <Chance value="1"/>
         </DamageResponse>
     </CBehaviorBuff>
+    <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorBuff id="MorphingintoWarpGate">
+        <DisableValidatorArray value="GatewayMorphing"/>
+        <DisableValidatorArray value="GatewayMorphingCombine" removed="1"/>
+        <Modification>
+            <AbilLinkDisableArray value="Rally" removed="1"/>
+        </Modification>
+    </CBehaviorBuff>
 </Catalog>

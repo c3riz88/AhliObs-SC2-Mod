@@ -4,4 +4,14 @@
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <LeaderAlias value=""/>
     </CUpgrade>
+    <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UpgradeData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUpgrade id="WarpGateResearch">
+        <EffectArray index="0" removed="1"/>
+        <EffectArray index="1" removed="1"/>
+        <EffectArray index="2" removed="1"/>
+        <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
+        <EffectArray index="5" removed="1"/>
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
 </Catalog>
