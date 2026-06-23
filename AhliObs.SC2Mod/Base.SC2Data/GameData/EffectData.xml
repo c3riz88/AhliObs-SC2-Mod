@@ -17,4 +17,11 @@
     <CEffectRemoveBehavior id="NeuralParasiteSCVRB">
         <BehaviorLink value="NeuralParasiteSCVRefresh"/>
     </CEffectRemoveBehavior>
+    <!--Zerg Viper rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectSet id="YoinkSet">
+        <ValidatorArray value="IsNotSiegedSiegeTank"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="YoinkStartCreatePlaceholder">
+        <ValidatorArray value="IsNotSiegedSiegeTank"/>
+    </CEffectCreateUnit>
 </Catalog>
