@@ -270,6 +270,7 @@ DocInfo/PatchNote253=SC2 Bug Fixes/Changes:
 DocInfo/PatchNote254=- fixed Observers only playing SC2 music ignoring sound game option
 DocInfo/Screenshot01=Use with Ahli's modified observer UIs for the full expanded observing feature experience!
 DocInfo/Website=https://github.com/Ahli/AhliObs-SC2-Mod
+Button/Tooltip/PsiStorm=Creates a storm of psionic energy that lasts <d time="8.4"/>, causing up to 110 damage to all units in the target area.
 Effect/Name/AHLI_PowerLevelGained=AHLI_PowerLevelGained
 Effect/Name/AHLI_PowerLevelLost=AHLI_PowerLevelLost
 Param/Expression/lib_AHLI_04EC4953=morph production start: ~A~ - ~B~

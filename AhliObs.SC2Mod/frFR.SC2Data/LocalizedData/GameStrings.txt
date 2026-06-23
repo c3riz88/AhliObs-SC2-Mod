@@ -13,6 +13,7 @@ DocInfo/HowToPlayBasic02=
 DocInfo/Name=AhliObs - 5.0.15 Rollback
 DocInfo/Screenshot01=Use with Ahli's modified observer UIs for the full expanded observing feature experience!
 DocInfo/Website=https://github.com/Ahli/AhliObs-SC2-Mod
+Button/Tooltip/PsiStorm=Crée une tempête d’énergie psionique qui dure <d time="8.4"/> et inflige jusqu’à 110 points de dégâts à toutes les unités dans la zone ciblée.
 Param/Value/lib_AHLI_02FAA83E=Répulseur
 Param/Value/lib_AHLI_034F71BF=Attaques de mêlée - Niv. 1
 Param/Value/lib_AHLI_0650DD4D=Poches ventrales

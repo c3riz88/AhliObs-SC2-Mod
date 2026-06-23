@@ -66,6 +66,13 @@
     <CEffectDamage id="PsiStormDamageInitial">
         <Amount value="6.85"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="PsiStormPersistent">
+        <PeriodCount value="14"/>
+        <PeriodicPeriodArray index="0" value="0.56"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="PsiStormSearch">
+        <AreaArray index="0" Radius="2"/>
+    </CEffectEnumArea>
     <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CEffectDamage id="FakeWeaponDummyDamage" removed="1"/>
 </Catalog>
