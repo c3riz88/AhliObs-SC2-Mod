@@ -46,7 +46,12 @@
         <WeaponArray Link="InfestorWeaponAcidSpores" removed="1"/>
     </CUnit>
     <CUnit id="InfestationPit">
+        <TechTreeUnlockedUnitArray value="SwarmHostMP"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <SubgroupPriority value="12"/>
         <CardLayouts index="0">
+            <LayoutButtons index="2" Face="ResearchNeuralParasite" AbilCmd="InfestationPitResearch,Research4"/>
             <LayoutButtons index="3" Face="AmorphousArmorcloud" AbilCmd="InfestationPitResearch,Research6"/>
         </CardLayouts>
     </CUnit>
