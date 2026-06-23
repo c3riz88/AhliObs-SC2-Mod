@@ -12,5 +12,19 @@
     <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CWeaponLegacy id="InfestorWeaponAcidSpores" removed="1"/>
     <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
-    <CWeaponLegacy id="DisruptorFakeWeapon" removed="1"/>
+    <CWeaponLegacy id="DisruptorFakeWeapon">
+        <Options index="Hidden" value="1"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <TargetFilters value="-;Player,Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <MinScanRange value="0"/>
+        <Range value="0"/>
+        <Arc value="0"/>
+        <Period value="1"/>
+        <Effect value=""/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <ChaseFilters value="-;Enemy"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
 </Catalog>

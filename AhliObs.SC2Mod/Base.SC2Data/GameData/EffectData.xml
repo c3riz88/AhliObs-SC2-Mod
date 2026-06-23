@@ -74,5 +74,7 @@
         <AreaArray index="0" Radius="2"/>
     </CEffectEnumArea>
     <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
-    <CEffectDamage id="FakeWeaponDummyDamage" removed="1"/>
+    <CEffectDamage id="FakeWeaponDummyDamage">
+        <Amount value="0"/>
+    </CEffectDamage>
 </Catalog>
