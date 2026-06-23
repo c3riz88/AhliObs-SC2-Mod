@@ -83,4 +83,17 @@
         <Capacity value="2250"/>
         <Contents value="2250"/>
     </CBehaviorResource>
+    <!--Zerg Creep rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorCreepSource id="NydusCreepGrowth">
+        <Period value="0.63"/>
+    </CBehaviorCreepSource>
+    <CBehaviorCreepSource id="makeCreep2x2Overlord">
+        <Period value="0.63"/>
+    </CBehaviorCreepSource>
+    <CBehaviorCreepSource id="makeCreep4x4">
+        <Period value="0.63"/>
+    </CBehaviorCreepSource>
+    <CBehaviorCreepSource id="makeCreep8x6">
+        <Period value="0.352"/>
+    </CBehaviorCreepSource>
 </Catalog>
