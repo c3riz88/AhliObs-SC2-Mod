@@ -146,4 +146,9 @@
     <CAbilEffectInstant id="HallucinationZealot">
         <Flags index="TransientPreferred" value="0"/>
     </CAbilEffectInstant>
+    <!--Protoss Warp Prism rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilTransport id="WarpPrismTransport">
+        <CmdButtonArray index="LoadAll" removed="1"/>
+        <SearchRadius removed="1"/>
+    </CAbilTransport>
 </Catalog>
