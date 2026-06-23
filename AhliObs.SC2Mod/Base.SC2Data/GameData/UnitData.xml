@@ -115,6 +115,10 @@
     <CUnit id="Nexus">
         <BehaviorArray Link="FastEnablerPowerSourceNexus"/>
     </CUnit>
+    <CUnit id="Pylon">
+        <BehaviorArray Link="PowerSourceFast"/>
+        <BehaviorArray Link="FastEnablerPowerUser"/>
+    </CUnit>
     <CUnit id="Gateway">
         <AbilArray index="5" Link="MorphBuildingGatewayWarpGateFree" removed="1"/>
         <BehaviorArray index="2" Link="MorphingintoWarpGate"/>
