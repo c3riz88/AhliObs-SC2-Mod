@@ -20,4 +20,9 @@
         <Range value="9"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="AmorphousArmorcloud" Requirements="UseAmorphousArmorcloud"/>
     </CAbilEffectTarget>
+    <!--Zerg Overlord rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilTransport id="OverlordTransport">
+        <CmdButtonArray index="LoadAll" removed="1"/>
+        <SearchRadius removed="1"/>
+    </CAbilTransport>
 </Catalog>

@@ -50,4 +50,13 @@
             <LayoutButtons index="3" Face="AmorphousArmorcloud" AbilCmd="InfestationPitResearch,Research6"/>
         </CardLayouts>
     </CUnit>
+    <!--Zerg Overlord rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Overlord">
+        <Speed value="0.6445"/>
+    </CUnit>
+    <CUnit id="OverlordTransport">
+        <CardLayouts index="0">
+            <LayoutButtons Face="LoadNearbyOverlord" Type="AbilCmd" AbilCmd="OverlordTransport,LoadAll" Row="1" Column="2" removed="1"/>
+        </CardLayouts>
+    </CUnit>
 </Catalog>
