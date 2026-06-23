@@ -136,3 +136,4 @@ UI/BattleReport/Title=Battle Report
 UI/Graphs/CurrentTime=현재
 UI/Graphs/Minus10Minutes=-10분
 UI/Graphs/Minus5Minutes=-5분
+Button/Tooltip/PsiStorm=Creates a storm of psionic energy that lasts <d time="8.4"/>, causing up to 110 damage to all units in the target area.

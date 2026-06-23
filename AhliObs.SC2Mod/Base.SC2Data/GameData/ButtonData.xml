@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!--Protoss High Templar tooltip rollback mods/voidmulti.sc2mod localized Button/Tooltip/PsiStorm from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CButton id="PsiStorm">
+        <Tooltip value="Button/Tooltip/PsiStorm"/>
+        <AlertTooltip value="Button/Tooltip/PsiStorm"/>
+    </CButton>
+</Catalog>
