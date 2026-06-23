@@ -249,4 +249,8 @@
         <CustomUnitStatusOffset value="0,105"/>
         <CustomUnitStatusAttachment value="Ref_Origin"/>
     </CActorUnit>
+    <!--Protoss Pylon placement indicator rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CActorModel id="PylonPlacementModel">
+        <On Terms="TimerExpired; TimerName PylonPowerSearch; ValidatePosition LocationHasFastEnablerPower" Send="Signal SpecialPower"/>
+    </CActorModel>
 </Catalog>
