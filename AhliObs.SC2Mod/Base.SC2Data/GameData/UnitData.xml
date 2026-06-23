@@ -40,4 +40,14 @@
         <Food value="6"/>
         <CostResource index="Minerals" value="675"/>
     </CUnit>
+    <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Infestor">
+        <AbilArray Link="attack" removed="1"/>
+        <WeaponArray Link="InfestorWeaponAcidSpores" removed="1"/>
+    </CUnit>
+    <CUnit id="InfestationPit">
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Face="AmorphousArmorcloud" AbilCmd="InfestationPitResearch,Research6"/>
+        </CardLayouts>
+    </CUnit>
 </Catalog>
