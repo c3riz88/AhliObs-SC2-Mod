@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!--Zerg Carapace Upgrades rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilResearch id="evolutionchamberresearch">
+        <InfoArray index="Research4">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+        </InfoArray>
+        <InfoArray index="Research5">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+        </InfoArray>
+        <InfoArray index="Research6">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+        </InfoArray>
+    </CAbilResearch>
+</Catalog>
