@@ -100,4 +100,8 @@
     <CUnit id="Raven">
         <SubgroupPriority value="84"/>
     </CUnit>
+    <!--Protoss Nexus rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Nexus">
+        <Food value="15"/>
+    </CUnit>
 </Catalog>
