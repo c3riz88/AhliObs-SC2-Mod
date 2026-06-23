@@ -15,6 +15,10 @@
             <Resource index="Vespene" value="250"/>
         </InfoArray>
     </CAbilResearch>
+    <!--Zerg Larva rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilTrain id="LarvaTrain">
+        <Flags index="DisableCollision" value="1"/>
+    </CAbilTrain>
     <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilEffectTarget id="AmorphousArmorcloud">
         <Range value="9"/>

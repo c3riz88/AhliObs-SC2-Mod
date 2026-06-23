@@ -40,6 +40,10 @@
         <Food value="6"/>
         <CostResource index="Minerals" value="675"/>
     </CUnit>
+    <!--Zerg Larva rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Larva">
+        <Radius value="0.125"/>
+    </CUnit>
     <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CUnit id="Infestor">
         <AbilArray index="7" Link="AmorphousArmorcloud"/>
