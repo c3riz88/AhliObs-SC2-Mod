@@ -110,14 +110,12 @@
     <!--Protoss Nexus rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CUnit id="Nexus">
         <Food value="15"/>
+        <BehaviorArray index="1" Link="FastEnablerPowerSourceNexus"/>
     </CUnit>
     <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
-    <CUnit id="Nexus">
-        <BehaviorArray Link="FastEnablerPowerSourceNexus"/>
-    </CUnit>
     <CUnit id="Pylon">
-        <BehaviorArray Link="PowerSourceFast"/>
-        <BehaviorArray Link="FastEnablerPowerUser"/>
+        <BehaviorArray index="1" Link="PowerSourceFast"/>
+        <BehaviorArray index="2" Link="FastEnablerPowerUser"/>
     </CUnit>
     <CUnit id="Gateway">
         <AbilArray index="5" Link="MorphBuildingGatewayWarpGateFree" removed="1"/>

@@ -113,6 +113,13 @@
         </DamageResponse>
     </CBehaviorBuff>
     <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorPowerSource id="FastEnablerPowerSourceNexus">
+        <Radius value="7"/>
+        <PowerLevel value="2"/>
+        <CliffLevelFlags index="Lower" value="0"/>
+        <Flags index="ProvidePowerWhileUnderConstruction" value="1"/>
+        <PowerLink value="FastEnablerPowerSource"/>
+    </CBehaviorPowerSource>
     <CBehaviorPowerUser id="PowerUserWarpable">
         <PowerStageArray MinPowerLevel="2" LevelGainEffect="PowerUserWarpablelevel2gained" LevelLossEffect="PowerUserWarpablelevel2lost">
             <Modification>
