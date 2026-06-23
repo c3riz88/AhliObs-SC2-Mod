@@ -139,4 +139,9 @@
         <EnergyStart value="50"/>
         <BehaviorArray Link="BatteryEnergy"/>
     </CUnit>
+    <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Disruptor">
+        <AbilArray Link="attack" removed="1"/>
+        <WeaponArray Link="DisruptorFakeWeapon" removed="1"/>
+    </CUnit>
 </Catalog>

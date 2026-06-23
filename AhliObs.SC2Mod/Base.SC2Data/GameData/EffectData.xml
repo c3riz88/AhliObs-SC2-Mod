@@ -64,4 +64,6 @@
     <CEffectDamage id="PsiStormDamageInitial">
         <Amount value="6.85"/>
     </CEffectDamage>
+    <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectDamage id="FakeWeaponDummyDamage" removed="1"/>
 </Catalog>
