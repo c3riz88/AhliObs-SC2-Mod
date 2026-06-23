@@ -5,4 +5,9 @@
     <CEffectSet id="AHLI_ArchonDTDTDies"/>
     <CEffectSet id="AHLI_PowerLevelLost"/>
     <CEffectSet id="AHLI_PowerLevelGained"/>
+    <!--Zerg Spore Crawler rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectDamage id="SporeCrawlerU">
+        <AttributeBonus index="Biological" value="10"/>
+        <Amount value="20"/>
+    </CEffectDamage>
 </Catalog>
