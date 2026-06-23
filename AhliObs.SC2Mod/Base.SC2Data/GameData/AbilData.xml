@@ -97,4 +97,13 @@
             <Charge TimeUse="28"/>
         </InfoArray>
     </CAbilWarpTrain>
+    <!--Protoss Gateway rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train1" Time="38"/>
+        <InfoArray index="Train2" Time="38"/>
+        <InfoArray index="Train4" Time="55"/>
+        <InfoArray index="Train5" Time="55"/>
+        <InfoArray index="Train6" Time="32"/>
+        <InfoArray index="Train7" Time="42"/>
+    </CAbilTrain>
 </Catalog>
