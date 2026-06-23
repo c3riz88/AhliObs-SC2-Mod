@@ -127,6 +127,10 @@
         <Offset index="23" value="-1,-3"/>
         <InfoArray index="0" Delay="15"/>
     </CBehaviorSpawn>
+    <!--Terran MULE Repair rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorBuff id="MuleRepairAutocastCheck">
+        <ExpireEffect value=""/>
+    </CBehaviorBuff>
     <!--Zerg Overseer rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CBehaviorBuff id="ChangelingDeathDamageResponse">
         <DamageResponse Fatal="1" Handled="KillOtherNearbyChangelingsSearch">
