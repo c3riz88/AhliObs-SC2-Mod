@@ -24,4 +24,8 @@
     <CEffectCreateUnit id="YoinkStartCreatePlaceholder">
         <ValidatorArray value="IsNotSiegedSiegeTank"/>
     </CEffectCreateUnit>
+    <!--Zerg Overseer rollback mods/voidmulti.sc2mod/base.sc2data/GameData/EffectData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CEffectModifyUnit id="CopyOrdersCaster">
+        <CopyOrderCount value="0"/>
+    </CEffectModifyUnit>
 </Catalog>
