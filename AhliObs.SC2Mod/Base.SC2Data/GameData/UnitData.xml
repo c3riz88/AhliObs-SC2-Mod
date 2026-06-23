@@ -54,7 +54,7 @@
         <SubgroupPriority value="12"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" Face="ResearchNeuralParasite" AbilCmd="InfestationPitResearch,Research4"/>
-            <LayoutButtons index="3" Face="AmorphousArmorcloud" AbilCmd="InfestationPitResearch,Research6"/>
+            <LayoutButtons Face="AmorphousArmorcloud" Type="AbilCmd" AbilCmd="InfestationPitResearch,Research6" Row="0" Column="1"/>
         </CardLayouts>
     </CUnit>
     <!--Zerg Overlord rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
