@@ -22,8 +22,10 @@
     </CAbilEffectTarget>
     <!--Zerg Overlord rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilTransport id="OverlordTransport">
-        <CmdButtonArray index="LoadAll" removed="1"/>
-        <SearchRadius removed="1"/>
+        <CmdButtonArray index="LoadAll" DefaultButtonFace="" State="Restricted">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <SearchRadius value="0"/>
     </CAbilTransport>
     <!--Terran Ghost rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilEffectTarget id="ChannelSnipe">
@@ -33,8 +35,10 @@
     </CAbilEffectTarget>
     <!--Terran Medivac rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilTransport id="MedivacTransport">
-        <CmdButtonArray index="LoadAll" removed="1"/>
-        <SearchRadius removed="1"/>
+        <CmdButtonArray index="LoadAll" DefaultButtonFace="" State="Restricted">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <SearchRadius value="0"/>
     </CAbilTransport>
     <!--Protoss Warpgate rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilMorph id="MorphBackToGateway">
@@ -148,7 +152,9 @@
     </CAbilEffectInstant>
     <!--Protoss Warp Prism rollback mods/voidmulti.sc2mod/base.sc2data/GameData/AbilData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CAbilTransport id="WarpPrismTransport">
-        <CmdButtonArray index="LoadAll" removed="1"/>
-        <SearchRadius removed="1"/>
+        <CmdButtonArray index="LoadAll" DefaultButtonFace="" State="Restricted">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <SearchRadius value="0"/>
     </CAbilTransport>
 </Catalog>
