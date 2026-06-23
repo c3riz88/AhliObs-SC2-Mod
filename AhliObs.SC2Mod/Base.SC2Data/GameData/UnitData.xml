@@ -82,4 +82,22 @@
         <LifeMax value="125"/>
         <Speed value="2.8125"/>
     </CUnit>
+    <!--Terran Medivac rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CUnit id="Medivac">
+        <CardLayouts index="0">
+            <LayoutButtons Face="LoadNearbyMedivac" Type="AbilCmd" AbilCmd="MedivacTransport,LoadAll" Row="1" Column="2" removed="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Marine">
+        <SubgroupPriority value="78"/>
+    </CUnit>
+    <CUnit id="Marauder">
+        <SubgroupPriority value="76"/>
+    </CUnit>
+    <CUnit id="Battlecruiser">
+        <SubgroupPriority value="80"/>
+    </CUnit>
+    <CUnit id="Raven">
+        <SubgroupPriority value="84"/>
+    </CUnit>
 </Catalog>
