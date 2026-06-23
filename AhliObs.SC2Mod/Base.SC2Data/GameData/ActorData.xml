@@ -251,6 +251,24 @@
     </CActorUnit>
     <!--Protoss Pylon placement indicator rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CActorModel id="PylonPlacementModel">
+        <On index="0" Terms="ActorCreation; Option Model Low" Send="SetOpacity 0.300000"/>
+        <On index="1" Terms="ActorCreation" Send="AnimGroupApply Placement"/>
+        <On index="2" Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On index="3" Terms="ActorOrphan" Send="Destroy"/>
+        <On index="4" Terms="Signal.*.HidePlacement" Send="SetVisibility"/>
+        <On index="5" Terms="Signal.*.ShowPlacement" Send="SetVisibility 1"/>
+        <On index="6" Terms="TimerExpired; TimerName PylonPowerSearch" Send="Create PylonUnpoweredSearchCircle"/>
+        <On index="7" Terms="TimerExpired; TimerName PylonPowerSearch" Send="Create PylonPowerSearchCircle"/>
+        <On index="8" Terms="TimerExpired; TimerName PylonPowerSearch" Send="TimerSet 0.062500 PylonPowerSearch"/>
+        <On index="9" Terms="ActorCreation" Send="TimerSet 0.062500 PylonPowerSearch"/>
+        <On index="10" Terms="TimerExpired; TimerName PylonPowerSearch" Send="Create PylonUnpoweredSearchCircle"/>
+        <On index="11" Terms="TimerExpired; TimerName PylonPowerSearch" Send="Create PylonPowerSearchCircle"/>
+        <On index="12" Terms="TimerExpired; TimerName PylonPowerSearch" Send="TimerSet 0.062500 PylonPowerSearch"/>
+        <On index="13" Terms="ActorCreation; !Option Model Low" Send="StatusSet SpecialPower 0"/>
+        <On index="14" Terms="ActorCreation; !Option Model Low" Send="Create PowerVisualFast"/>
+        <On index="15" Terms="ActorCreation; Option Model Low" Send="Create PowerVisualFastLow"/>
+        <On index="16" Terms="ActorCreation; !Option Model Low" Target="PowerVisualFast" Send="SetVisibility"/>
+        <On index="17" Terms="ActorCreation; Option Model Low" Target="PowerVisualFastLow" Send="SetVisibility"/>
         <On index="18" Terms="TimerExpired; TimerName PylonPowerSearch; ValidatePosition LocationHasFastEnablerPower" Send="Signal SpecialPower"/>
         <On index="19" Terms="TimerExpired; TimerName PylonPowerSearch; !IsStatus SpecialPower 0" Send="StatusDecrement SpecialPower"/>
         <On index="20" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualFast" Send="SetVisibility"/>
