@@ -120,4 +120,8 @@
             <AbilLinkDisableArray value="Rally" removed="1"/>
         </Modification>
     </CBehaviorBuff>
+    <!--Protoss Sentry rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorBuff id="Hallucination">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
 </Catalog>
