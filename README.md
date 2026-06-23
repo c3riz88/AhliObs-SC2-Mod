@@ -15,6 +15,12 @@ The extension mod is available on Americas, Europe and Korean servers.
 
 ![Find AhliObs on battlenet](https://user-images.githubusercontent.com/5763784/210896520-b8f97d19-8e9b-4d10-b00a-3daae1612d1f.png)
 
+### Variant: SC2 5.0.15.96883 rollback
+
+The `rollback-5.0.15.96883` branch keeps the current `Void Multi (Mod)` dependency, but adds
+catalog overrides in the standard `Base.SC2Data/GameData/*Data.xml` files to roll the SC2
+5.0.16.97364 multiplayer data back to the SC2 5.0.15.96883 snapshot.
+
 
 
 ### All Changes compared to WCS GameHeart 1.25/Americas
