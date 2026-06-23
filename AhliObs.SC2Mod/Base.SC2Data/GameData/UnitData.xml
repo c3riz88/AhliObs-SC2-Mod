@@ -42,9 +42,11 @@
     </CUnit>
     <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/UnitData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CUnit id="Infestor">
-        <AbilArray Link="attack" removed="1"/>
-        <WeaponArray Link="InfestorWeaponAcidSpores" removed="1"/>
+        <AbilArray index="7" Link="AmorphousArmorcloud"/>
+        <AbilArray index="8" Link="attack" removed="1"/>
+        <WeaponArray index="0" Link="InfestorWeaponAcidSpores" removed="1"/>
     </CUnit>
+    <CUnit id="InfestorWeapon" removed="1"/>
     <CUnit id="InfestationPit">
         <TechTreeUnlockedUnitArray value="SwarmHostMP"/>
         <Collide index="Locust" value="1"/>

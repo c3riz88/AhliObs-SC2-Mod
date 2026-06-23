@@ -9,6 +9,8 @@
         <MinScanRange value="6.5"/>
         <Range value="6"/>
     </CWeaponLegacy>
+    <!--Zerg Infestor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CWeaponLegacy id="InfestorWeaponAcidSpores" removed="1"/>
     <!--Protoss Disruptor rollback mods/voidmulti.sc2mod/base.sc2data/GameData/WeaponData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CWeaponLegacy id="DisruptorFakeWeapon" removed="1"/>
 </Catalog>
