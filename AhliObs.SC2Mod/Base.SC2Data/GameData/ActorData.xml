@@ -251,16 +251,16 @@
     </CActorUnit>
     <!--Protoss Pylon placement indicator rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CActorModel id="PylonPlacementModel">
-        <On index="12" Terms="TimerExpired; TimerName PylonPowerSearch; ValidatePosition LocationHasFastEnablerPower" Send="Signal SpecialPower"/>
-        <On index="13" Terms="TimerExpired; TimerName PylonPowerSearch; !IsStatus SpecialPower 0" Send="StatusDecrement SpecialPower"/>
-        <On index="14" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualFast" Send="SetVisibility"/>
-        <On index="15" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualFastLow" Send="SetVisibility"/>
-        <On index="16" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility 1"/>
-        <On index="17" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility 1"/>
-        <On index="18" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualFast" Send="SetVisibility 1"/>
-        <On index="19" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualFastLow" Send="SetVisibility 1"/>
-        <On index="20" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility"/>
-        <On index="21" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility"/>
-        <On index="22" Terms="Signal.*.SpecialPower" Send="StatusSet SpecialPower 2"/>
+        <On index="18" Terms="TimerExpired; TimerName PylonPowerSearch; ValidatePosition LocationHasFastEnablerPower" Send="Signal SpecialPower"/>
+        <On index="19" Terms="TimerExpired; TimerName PylonPowerSearch; !IsStatus SpecialPower 0" Send="StatusDecrement SpecialPower"/>
+        <On index="20" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualFast" Send="SetVisibility"/>
+        <On index="21" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualFastLow" Send="SetVisibility"/>
+        <On index="22" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility 1"/>
+        <On index="23" Terms="StatusDecrement; IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility 1"/>
+        <On index="24" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualFast" Send="SetVisibility 1"/>
+        <On index="25" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualFastLow" Send="SetVisibility 1"/>
+        <On index="26" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility"/>
+        <On index="27" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility"/>
+        <On index="28" Terms="Signal.*.SpecialPower" Send="StatusSet SpecialPower 2"/>
     </CActorModel>
 </Catalog>
