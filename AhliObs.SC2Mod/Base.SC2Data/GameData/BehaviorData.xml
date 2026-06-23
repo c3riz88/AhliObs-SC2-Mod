@@ -96,4 +96,8 @@
     <CBehaviorCreepSource id="makeCreep8x6">
         <Period value="0.352"/>
     </CBehaviorCreepSource>
+    <!--Zerg Larva rollback mods/voidmulti.sc2mod/base.sc2data/GameData/BehaviorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CBehaviorSpawn id="SpawnLarva">
+        <InfoArray index="0" Delay="15"/>
+    </CBehaviorSpawn>
 </Catalog>
