@@ -286,6 +286,7 @@
         <On index="26" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility"/>
         <On index="27" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility"/>
         <On index="28" Terms="Signal.*.SpecialPower" Send="StatusSet SpecialPower 2"/>
+        <On Terms="TimerExpired; TimerName PylonPowerSearch; ValidatePosition LocationHasFastEnablerPower" Send="Signal SpecialPower"/>
         <HostSiteOps Ops="SOpTipabilityFloorScope"/>
         <Model value="PlacementModel"/>
     </CActorModel>
