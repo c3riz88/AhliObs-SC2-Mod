@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <!--Protoss Pylon placement low visual rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
+    <CActorRange id="PowerVisualLow">
+        <IconScale removed="1"/>
+        <IconArcLength value="1.250000"/>
+    </CActorRange>
+    <CActorRange id="UnpoweredVisualLow">
+        <IconScale removed="1"/>
+        <IconArcLength value="0.750000"/>
+    </CActorRange>
     <CActorUnit id="Egg">
         <CustomUnitStatusFrame value="AHLI_ProductionStatusBars/ProductionStatusEgg"/>
         <CustomUnitStatusOffset value="8,40"/>
