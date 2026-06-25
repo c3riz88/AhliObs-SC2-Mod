@@ -251,6 +251,12 @@
     </CActorUnit>
     <!--Protoss Pylon placement indicator rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
     <CActorModel id="PylonPlacementModel">
+        <Aliases index="0" value="_Main"/>
+        <Aliases index="1" value="_Unit"/>
+        <Aliases index="2" value="_Selectable"/>
+        <Filter index="Neutral" value="1"/>
+        <Filter index="Enemy" value="1"/>
+        <FogVisibility value="Visible"/>
         <On index="0" Terms="ActorCreation; Option Model Low" Send="SetOpacity 0.300000"/>
         <On index="1" Terms="ActorCreation" Send="AnimGroupApply Placement"/>
         <On index="2" Terms="ActorCreation" Send="$Stand PlayForever"/>
@@ -280,5 +286,7 @@
         <On index="26" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisual" Send="SetVisibility"/>
         <On index="27" Terms="StatusDecrement; !IsStatus SpecialPower 0" Target="PowerVisualLow" Send="SetVisibility"/>
         <On index="28" Terms="Signal.*.SpecialPower" Send="StatusSet SpecialPower 2"/>
+        <HostSiteOps Ops="SOpTipabilityFloorScope"/>
+        <Model value="PlacementModel"/>
     </CActorModel>
 </Catalog>
