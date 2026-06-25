@@ -259,7 +259,10 @@
         <CustomUnitStatusAttachment value="Ref_Origin"/>
     </CActorUnit>
     <!--Protoss Pylon placement indicator rollback mods/voidmulti.sc2mod/base.sc2data/GameData/ActorData.xml from SC2 5.0.16.97364 to 5.0.15.96883-->
-    <CActorModel id="PylonPlacementModel">
+    <CActorUnit id="Pylon">
+        <PlacementActorModel value="AHLIPylonPlacementModel"/>
+    </CActorUnit>
+    <CActorModel id="AHLIPylonPlacementModel">
         <Aliases index="0" value="_Main"/>
         <Aliases index="1" value="_Unit"/>
         <Aliases index="2" value="_Selectable"/>
